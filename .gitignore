@@ -24,3 +24,4 @@ hs_err_pid*
 
 # Ignoring IDEA files
 .idea
+out
