@@ -13,4 +13,10 @@
 
 ## 0.2.1-SNAPSHOT
 
-* Created toSet(), toQueue() and toDeque() methods for RandomSetBuilder class
+* Created `toSet()`, `toQueue()` and `toDeque()` methods for RandomSetBuilder class
+
+## 1.0.0-RELEASE
+
+* Changed `append()` method return type to RandomSetBuilder
+* Created `appendAll()` method
+* Created documentation in README.md
