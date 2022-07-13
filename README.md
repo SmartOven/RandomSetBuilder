@@ -1,2 +1,3 @@
 # RandomSetBuilder
-Java util class for building sets of random numbers from the given range
+RandomSetBuilder - is a class that builds you set of random numbers from the range
+
