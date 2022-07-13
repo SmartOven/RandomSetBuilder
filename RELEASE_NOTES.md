@@ -10,3 +10,7 @@
 
 * Created RandomSetBuilder realisation
 * Created testing cycle in Demo class (in main method)
+
+## 0.2.1-SNAPSHOT
+
+* Created toSet(), toQueue() and toDeque() methods for RandomSetBuilder class

@@ -7,6 +7,10 @@ import java.util.Random;
 
 public class Demo {
     public static void main(String[] args) {
+        test();
+    }
+
+    private static void test() {
         Random random = new Random(System.currentTimeMillis());
         while (true) {
             int min = random.nextInt(10);
@@ -25,8 +29,9 @@ public class Demo {
             }
 
             if (!randomSet.equals(checker)) {
-                System.out.println("randomSet: " + randomSet);
-                System.out.println("checker: " + checker);
+                System.out.println("Test failed!");
+                System.out.println("Generated randomSet:      " + randomSet);
+                System.out.println("Correct result should be: " + checker);
                 break;
             }
         }
