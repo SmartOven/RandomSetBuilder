@@ -12,19 +12,15 @@ public class RandomSetBuilder {
     private int currentMin; // 0 by default
     private final int max; // 100 by default
 
-    public RandomSetBuilder() {
-        this(0, 100, 0);
-    }
-
     public RandomSetBuilder(int max) {
-        this(0, max, 0);
+        this(0, max, System.currentTimeMillis());
     }
 
     public RandomSetBuilder(int min, int max) {
-        this(min, max, 0);
+        this(min, max, System.currentTimeMillis());
     }
 
-    public RandomSetBuilder(int min, int max, int seed) {
+    public RandomSetBuilder(int min, int max, long seed) {
         this.currentMin = min;
         this.max = max - 1;
 
@@ -62,10 +58,16 @@ public class RandomSetBuilder {
      *
      * @param count count of numbers to be added to set
      */
-    public void append(int count) {
-        for (int i = 0; i < count; i++) {
+    public RandomSetBuilder append(int count) {
+        int maxCount = Math.min(count, max - currentMin + 1);
+        for (int i = 0; i < maxCount; i++) {
             addNextRandomInt();
         }
+        return this;
+    }
+
+    public RandomSetBuilder appendAll() {
+        return append(max - currentMin + 1);
     }
 
     /**
